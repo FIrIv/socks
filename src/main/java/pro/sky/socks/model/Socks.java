@@ -1,5 +1,6 @@
 package pro.sky.socks.model;
 
+import jakarta.persistence.Column;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,9 +19,8 @@ public class Socks {
     private Integer id;
 
     @EqualsAndHashCode.Exclude
-    @Enumerated(EnumType.STRING)
     @Column(name = "color")
-    private Color color;
+    private String color;
 
     @EqualsAndHashCode.Exclude
     @Column(name="cotton_part")
